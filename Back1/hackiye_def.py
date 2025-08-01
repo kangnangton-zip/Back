@@ -4,8 +4,8 @@ import pyperclip
 import re
 import time
 import easyocr
-hacking=["Dior", "알바몬", "대성마이맥", "GS25", "GS SHOP", "일상카페", "올리브영", "티파니엔코", "머스트잇", "adidas"]
-def naver():
+hacking=["Dior", "알바몬", "대성마이맥", "GS25", "GS SHOP", "일상카페", "올리브영", "티파니엔코", "머스트잇", "adidas"]#서비스 명칭
+def naver():#브라우저를 얼고 더보기 누르기 자동화 밑 드래그 이후 복사 이후 복사된 항목 t변수 저장 데이터 처리
     w.open_new('https://nid.naver.com/internalToken/view/tokenList/pc/ko#')
     pyautogui.PAUSE = 4
     pyautogui.moveTo(949, 885)
@@ -58,7 +58,7 @@ def naver():
     
     return len(hacking+service_names)-len(set(hacking+service_names))
 
-def google():
+def google():#로그인된 서비스 버튼 클릭 이후 그래그 이후 저장 값 변수저장 및 데이터 처리
     w.open_new('https://myaccount.google.com/connections?filters=3,4&hl=ko')
     time.sleep(3)
     pyautogui.moveTo(531,670)
@@ -94,9 +94,8 @@ def google():
         return return_nasmes
     return len(hacking+text2)-len(set(hacking+text2))
 
-def dark():
+def dark(): #스크롤 이후 캡쳐로 저장 이후 이미지에서 텍스트 추출 이후 추출 데이터 처리
     w.open_new('https://myactivity.google.com/dark-web-report/dashboard?hl=ko&utm_source=google-account&utm_medium=web&utm_campaign=my_account_dark_web_report_member_card')
-    #이거 스크롤 살짝 내리고 캡 원하는대로 뜨고 그거 이미지 추출하고 추출한 데이터 확인이후 사진 삭제
     time.sleep(5)
     pyautogui.moveTo(277,522)
     pyautogui.scroll(-300)
@@ -109,8 +108,8 @@ def dark():
         hacking.append(detection[1])
     return hacking[-1][3]
 
-def hibp(mail):
-    w.open_new('https://haveibeenpwned.com')
+def hibp(mail):#매개변수로 받은 값 자동 입력 및 값 복사
+    w.open_new('https://haveibeenpwned.com')ㅇㅇ
     pyautogui.moveTo(632,729)
     pyautogui.click()
     time.sleep(2)
