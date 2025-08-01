@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import subprocess
 
-
+ 
 app = Flask(__name__)
 CORS(app)  #모든 출처 허용 (개발용)
 #CORS(app, resources={r"/run-python": {"origins": "http://127.0.0.1:5500"}}) 실 배포시
