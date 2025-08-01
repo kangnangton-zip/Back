@@ -1,4 +1,10 @@
-//sever.js
+// src/
+// ├── backend/
+// │   └── server.js V
+// └── frontend/
+//     ├── index.html
+//     ├── script.js
+//     └── style.css
 const express = require('express'); // Express 프레임워크를 불러옵니다. 웹 애플리케이션을 만들고 라우팅을 처리하는 데 사용됩니다.
 const path = require('path');     // 파일 및 디렉토리 경로 작업을 위한 Node.js 내장 모듈입니다.
 const axios = require('axios');   // HTTP 요청을 보내기 위한 Promise 기반 클라이언트입니다. 외부 API와 통신하는 데 사용됩니다.
