@@ -48,8 +48,8 @@ async def run_python():
         )
 
 # 이 파일을 직접 실행할 때 (예: python your_fastapi_app.py) Uvicorn으로 실행
-# 개발 시에는 터미널에서 'uvicorn your_fastapi_app:app --reload --port 5000' 명령어를 사용합니다.
-# (여기서 'your_fastapi_app'은 이 파일의 이름입니다.)
+# 개발 시에는 터미널에서 'uvicorn your_fastapi_app:app --reload --port 5000' 명령어를 사용
+# (여기서 'your_fastapi_app'은 이 파일의 이름)
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=5000)
